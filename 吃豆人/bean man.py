@@ -118,8 +118,14 @@ def startLevelGame(level, screen, font):
 #显示文字
 def showText(screen, font, is_clearance):
 	clock = pygame.time.Clock()
-	msg = 'Game Over!' if not is_clearance else 'Congratulations, you won!'
-	positions = [[235, 233], [65, 303], [170, 333]] if not is_clearance else [[145, 233], [65, 303], [170, 333]]
+	if not is_clearance
+		msg = 'Game Over!' 
+	else 
+		msg = 'Congratulations, you won!'
+	if not is_clearance
+		positions = [[235, 233], [65, 303], [170, 333]] 
+	else 
+		positions = [[145, 233], [65, 303], [170, 333]]
 	surface = pygame.Surface((400, 200))
 	surface.set_alpha(10)
 	surface.fill((128, 128, 128))
