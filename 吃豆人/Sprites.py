@@ -24,8 +24,8 @@ class Player(pygame.sprite.Sprite):
 	def update(self, wall_sprites, gate_sprites):
 		if not self.is_move:
 			return False
-		x_prev = self.rect.left
-		y_prev = self.rect.top
+		x_pre = self.rect.left
+		y_pre = self.rect.top
 		self.rect.left += self.speed[0]
 		self.rect.top += self.speed[1]
 		is_collide = pygame.sprite.spritecollide(self, wall_sprites, False)
@@ -33,8 +33,8 @@ class Player(pygame.sprite.Sprite):
 			if not is_collide:
 				is_collide = pygame.sprite.spritecollide(self, gate_sprites, False)
 		if is_collide:
-			self.rect.left = x_prev            #撞墙则人物下一个位置保持原位，表示撞墙
-			self.rect.top = y_prev
+			self.rect.left = x_pre            #撞墙则人物下一个位置保持原位，表示撞墙
+			self.rect.top = y_pre
 			return False
 		return True
 
