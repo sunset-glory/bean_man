@@ -79,7 +79,7 @@ def startLevelGame(level, screen, font):
 				ghost.changeSpeed(ghost.randomDirection())
 				res = ghost.update(wall_sprites, None)
 			'''
-			# 指定幽灵运动路径
+			# 指定幽灵运动路径（这里参考了网上的行动方式）
 			if ghost.tracks_loc[1] < ghost.tracks[ghost.tracks_loc[0]][2]:                        #控制敌人行进列表里的每一步用多少次
 				ghost.changeSpeed(ghost.tracks[ghost.tracks_loc[0]][0: 2])
 				ghost.tracks_loc[1] += 1
