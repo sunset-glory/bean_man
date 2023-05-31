@@ -1,6 +1,7 @@
 '''
 Function:
 	吃豆人小游戏
+参考了网上的一些做法，进行修改优化后形成结果
 '''
 import sys
 import pygame
